@@ -1,76 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
+<title>IQ Test</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="stylesheet" href="./style/main.css">
+
+<head>
   <meta charset="UTF-8">
-  <title>IQ Test</title>
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <link rel="stylesheet" href="./style/main.css">
-  <head>
-    <script type="text/javascript" src="./javascript/utils.js"></script>
-    <script type="text/javascript" src="./javascript/api.js"></script>
-    <script type="text/javascript">
-      window.onload = onIndexLoad;
-    </script>
-  </head>
+  <meta name="description" content="Final assignment Web Applications">
+  <meta name="author" content="Linoy Kohen">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script type="text/javascript" src="./javascript/utils.js"></script>
+  <script type="text/javascript" src="./javascript/api.js"></script>
+  <script type="text/javascript">
+    window.onload = onIndexLoad;
+  </script>
+</head>
 
-  <body>
-    <!-- <img src="img_la.jpg" alt="LA" style="width:100%"> -->
+<body>
+  <!-- <img src="img_la.jpg" alt="LA" style="width:100%"> -->
 
-    <div class="login-container">
+  <div class="login-container">
     <h1>IQ Test - Let's start</h1>
-      <div class="rules-and-legend">
-        <h2>Game rules:</h2>
-        <div class="game-rule-container">
-          <ol>
-            <li>Click Start</li>
-            <li>The game modal will pop-up
-              <ul>
-                <li>In the bottom part - you have an equation to solve.</li>
-                <li>Insert your answer - don't use calculator - we are watching you!</li>
-                <li>Click Check Result</li>
-                <li>An alert will tell how smart are you</li>
-              </ul>
-            </li>
-          </ol>
-        </div>
-        <div class="legend-container">
-          Level Legend
-          <table>
-            <tr>
-              <th>Level</th>
-              <th>Numbers</th>
-            </tr>
-            <tr>
-              <td>1</td>
-              <td>0 - 9</td>
-            </tr>
-            <tr>
-              <td>2</td>
-              <td>0 - 99</td>
-            </tr>
-            <tr>
-              <td>3</td>
-              <td>0 - 999</td>
-            </tr>
-          </table>
-        </div>
-      </div>  
-      <h1>Login | <a href="./pages/sign-up.html">Sign-up</a></h1>
-      <div class="same-row-images">
-        <img class="lined-img" src="./images/pic1.jpg"/>
-        <img class="lined-img" src="./images/pic2.jpeg"/>
+    <div class="rules-and-legend">
+      <h2>Game rules:</h2>
+      <div class="game-rule-container">
+        <ol>
+          <li>Click Start</li>
+          <li>The game modal will pop-up
+            <ul>
+              <li>In the bottom part - you have an equation to solve.</li>
+              <li>Insert your answer - don't use calculator - we are watching you!</li>
+              <li>Click Check Result</li>
+              <li>An alert will tell how smart are you</li>
+            </ul>
+          </li>
+        </ol>
       </div>
-      <form action="javascript:login();" method="post">
-        <div class="container">
-          <label for="uname"><b>Username</b></label>
-          <input type="text" placeholder="Enter Username" name="uname" id="username" required>
-  
-          <label for="psw"><b>Password</b></label>
-          <input type="password" placeholder="Enter Password" name="psw" id="password" required>
-          <button type="submit" class="styled-button">Login</button>
-        </div>
-      </form>
+      <div class="legend-container">
+        Level Legend
+        <table>
+          <tr>
+            <th>Level</th>
+            <th>Numbers</th>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td>0 - 9</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>0 - 99</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>0 - 999</td>
+          </tr>
+        </table>
+      </div>
     </div>
+    <h1>Login | <a href="./pages/sign-up.html">Sign-up</a></h1>
+    <div class="same-row-images">
+      <img class="lined-img" src="./images/pic1.jpg" />
+      <img class="lined-img" src="./images/pic2.jpeg" />
+    </div>
+    <form action="javascript:login();" method="post">
+      <div class="container">
+        <label for="uname"><b>Username</b></label>
+        <input type="text" placeholder="Enter Username" name="uname" id="username" required>
 
-  </body>
+        <label for="psw"><b>Password</b></label>
+        <input type="password" placeholder="Enter Password" name="psw" id="password" required>
+        <button type="submit" class="styled-button">Login</button>
+      </div>
+    </form>
+  </div>
+
+</body>
 
 </html>
