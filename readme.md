@@ -6,10 +6,9 @@
 1. open terminal in root folder
 2. run ```cd server```
 3. run ```npm i```
-4. run ```mkdir data```
-5. run ```echo "[]" >> data/users.json```
-6. run ```echo '"{}"' >> data/loggedInUser.json```
-7. run ```node src/index.js```
+4. run ```chmod +x init.sh```
+5. run ```./init.sh```
+6. run ```node src/index.js```
 
 ## Client:
 1. open terminal in root folder
