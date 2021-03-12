@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="UTF-8">
+<title>IQ Test</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="stylesheet" href="../style/main.css">
+
+<head>
+  <script type="text/javascript" src="../javascript/utils.js"></script>
+  <script type="text/javascript" src="../javascript/api.js"></script>
+  <script type="text/javascript">
+    window.onload = onHomeLoad;
+    getUsers();
+  </script>
+</head>
+
+<body>
+  <!-- <img src="img_la.jpg" alt="LA" style="width:100%"> -->
+
+  <div class="main-container">
+    <div class="user-account">
+      <p><h2>Hello <span id="username-label"></span></h2>&nbsp;&nbsp;<button onclick="logout()" class="logout-btn">Logout</button></p>
+    </div>
+    <h1 class="main-heading">IQ Test - it's you against the <span class="main-heading-span">world!</span></h1>
+    <div class="user-details-container">
+      <h2 class="history-heading">Your history:</h2>
+      <ol>
+        <li><h4>Level 1: <span id="level-1-score"></span> points</h4></li>
+        <li><h4>Level 2: <span id="level-2-score"></span> points</h4></li>
+        <li><h4>Level 3: <span id="level-3-score"></span> points</h4></li>
+      </ol>
+    </div>
+
+    <div class="start-game-form-container">
+        <div class="container">
+          <form action="javascript:updateUserData();" id="user-data-form">
+            <br>
+            <label>Custom Details:</label><br><br>
+            <label>Choose Level</label><br>
+            
+            <input type="radio" id="level1-rb" name="level" value="1">
+            <label for="level1-rb">Level 1</label><br>
+            <input type="radio" id="level2-rb" name="level" value="2">
+            <label for="level2-rb">Level 2</label><br>
+            <input type="radio" id="level3-rb" name="level" value="3">
+            <label for="level3-rb">Level 3</label>
+            
+            <br>
+            <br>
+            <label>Choose Your Color</label><br>
+            <input type="radio" id="color-green-rb" name="color" value="green">
+            <span class='green-color-cube' for="color1-rb">green</span><br>
+            <input type="radio" id="color-blue-rb" name="color" value="blue">
+            <span class='blue-color-cube' for="color2-rb">blue</span><br>
+            <input type="radio" id="color-pink-rb" name="color" value="pink">
+            <span class='pink-color-cube' for="color3-rb">pink</span>
+
+            <br>
+            <button id="update-data-btn" type="submit">Update Data</button>
+          </form>
+          <form action="javascript:startGame();" id="start-game-form">
+            <button id="start-game-btn" type="submit" class="styled-button">Start</button>
+          </form>
+        </div>
+    </div>
+    <div class="game-container">
+      <!-- The Modal -->
+      <div id="game-modal" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content">
+          <button id="stop-game-btn" class="close">Stop</button>
+          Users Scores
+          <div class="users-data-container">
+            <div id="users-ul"></div>
+          </div>
+          <br>
+          <br>
+          <div>
+            IQ Test - Go for it!
+            <form action="javascript:updateUserScore();">
+              <span id="equation-label"></span>&nbsp;&nbsp;=&nbsp;&nbsp;
+              <input placeholder="Insert your answer" name="user-result" id="user-result-input" />
+              <button type="submit">Check Result</button>
+            </form>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+</body>
+
+</html>
